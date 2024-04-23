@@ -10,7 +10,6 @@ const mongoURI= process.env.MONGO_URI;
 //for adding html form/code
 app.use(express.static(path.join(__dirname,'public')));
 mongoose.connect(mongoURI)
-// mongoose.connect('mongodb+srv://Arshi33:333Arshi@cluster0.j10uztc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 .then(()=>console.log('Connected to MongoDb'))
 .catch(err=> console.error('Error connecting to MongoDb: ',err));
 
